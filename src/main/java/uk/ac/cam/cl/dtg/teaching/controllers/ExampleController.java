@@ -36,7 +36,7 @@ public class ExampleController implements ExampleApi {
 	public Fruit proxy(String type) throws Exception {
 		ResteasyClient c = new ResteasyClientBuilder().build();
 		ResteasyWebTarget t = c
-				.target("http://localhost:8080/api-template/api");
+				.target("http://localhost:8080/resteasy-api-example/api");
 		ExampleApi proxy = t.proxy(ExampleApi.class);
 		Fruit apple = proxy.load(type);
 		return apple;
